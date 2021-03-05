@@ -17,6 +17,7 @@ gem 'rails', '~> 5.1.4'
 
 gem 'sqlite3', '~> 1.3.11'
 
+
 #gem 'mysql2'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
