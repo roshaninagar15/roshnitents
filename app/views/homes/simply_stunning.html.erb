@@ -1,0 +1,297 @@
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href='https://fonts.googleapis.com/css?family=Great Vibes' rel='stylesheet'>
+<style>
+.mySlides {display:none;}
+</style>
+<body>
+
+<div class="container-fluid">
+<div class="navbar-header">
+<h3 style="color: #2492ff
+">Simply Stunning</h3></div>
+<ul class="nav navbar-nav navbar-right">
+<li><%= link_to "Home" , homes_index_path,style: "color: #ea4e74",data: { turbolinks: false } %></li> 
+<li style="margin-top: 8%;">&gt</li>
+<li class="active"><%= link_to "Simply Stunning " , homes_simply_stunning_path,style: "color: #2492ff" %></li></ul>
+</div> 
+<div class="w3-content w3-section" style="max-width:800px; display: block;    
+">
+<img class="mySlides" src="http://presstelegram.readerschoice.la/wp-content/uploads/2014/05/ENCHANTED.jpg" style="width:100%; height: 5%;vertical-align: middle;height: 500px;float: left;position: relative;display: list-item;">
+ <img class="mySlides" src="https://weddinginvitationstalk.files.wordpress.com/2015/04/westin-wedding-ceremony-by.jpg" style="width:100%; height: 5%;height: 500px;float: left;position: relative;display: list-item;">
+<img class="mySlides" src="http://s3.weddbook.com/t1/2/3/8/2380606/outdoor-beach-wedding-decor-ideas-wedding-decor.jpg" style="width:100%;height: 5%;height: 500px;float: left;position: relative;display: list-item;">
+</div>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+<br />
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12">
+<h2 style="text-align: left;margin-top: 5%;">
+<span style="color: #ff48ff;">
+<i>Simply Stunning</i></span></h2>
+<p class="lead" style="font-size:20px;"><p>When a client described a luxurious tent in ivory, cream and gold to a friend, she called it ‘Simply Stunning’, and ever since we have stuck with that term to describe a more neutral luxury theme. There is a crossover with our Old Hollywood, Winter Wonderland, Mediterranean, Wine Country and Classic White Wedding themes. We love the understated elegance of a neutral palate where details are more subtle and the tent has a softer more feminine feel.  Ideal for an elegant cocktail reception, sophisticated garden party, sweet 16, baby shower party, Bat Mitzvah tent as well as a classic white wedding reception or ceremony tent.
+</p><br/ ><br />
+
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-6">
+<!-- 1. classic wedding image part start -->
+<h3 style="color: #c29e00; margin-left: 3%";>Classic Weddings</h3>
+</div>
+<div class="col-md-6">
+<h3 style="color: #c29e00; margin-left: 3%";>Elegant Parties and Gatherings</h3><br />
+</div>
+</div>
+</div>
+
+<!-- model image add in wedding page -->
+    
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-6">
+ <%= image_tag "myweddingplanning.in_wedding-planner-in-goa_beach-wedding-planner-i-n-goa.jpg", width:550 , height:345 , class: "w3-hover-opacity",onclick: "onClick(this)",:style=>"cursor:pointer;" ,data: { turbolinks: false } %>
+     </div>
+<div class="col-md-6">
+  <%= image_tag "new-elegant-party-decoration-ideas-additional-home-368931.jpg", width:550 , height:345 , class: "w3-hover-opacity",onclick: "onClick(this)",:style=>"cursor:pointer;" ,data: { turbolinks: false } %><br />
+    </div>
+    </div>
+<div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+  <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+  <div class="w3-modal-content w3-animate-zoom">
+    <img id="img01" style="width:100%">
+  </div>
+</div>
+
+
+<script>
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+}
+</script>
+</div>
+<!-- model image add end in wedding page -->
+
+<!-- 1. Classic weddings content start -->
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-6">
+<p class="lead" style="font-size:20px;"><p><b>Timeless elegance, subtle detail and attention to detail</b> are what typify Roshni Tents’ classic wedding themed tents.</p>
+</div>
+<!-- classic weddings content end -->
+<!-- Elegant Parties and Gatherings content start -->
+<div class="col-md-6">
+<p class="lead" style="font-size:20px;"><p><b>Simplicity is a challenge.</b> Removing the unnecessary leaves the essential, and the essential should be simply stunning. </p><br /><br />
+</div>
+<!-- Elegant Parties and Gatherings content start -->
+</div>
+</div>
+</div>
+<div class="col-md-12">
+  <div style="border-top:1px solid #0088cc;  color: #ff48ff;">
+  </div><br /><br />
+  </div>
+</div>
+
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12">
+<h2 style="text-align: center;font-family: 'Great Vibes';font-size: 42px;">
+<span style="color: #ff48ff;">
+<i>Explore the Simply Stunning Theme</i></span></h2><br /><br /><br />
+<!-- bottom images slider in html page start !-->
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12">
+<div id="slidy-container">
+  <figure id="slidy">
+    <%= image_tag "https://marrymetampabay.com/wp-content/uploads/2014/11/33-Pink-A-la-Carte-Wedding-Reception.jpg" %>
+    <%= image_tag "http://festivitiesmn.festivities.netdna-cdn.com/wp-content/uploads/2016/04/19273090461_b9adcbc6be_k.jpg" %>
+    <%= image_tag "http://www.myweddingplanning.in/wp-content/uploads/myweddingplanning.in_wedding-planner-in-goa_beach-wedding-planner-i-n-goa.jpg" %>
+    <%= image_tag "IMG_3479.jpg" %>
+    <%= image_tag "https://static1.squarespace.com/static/56589d96e4b0c377c45acf92/569d53295827c35cee29ff85/56c388250442624a80ac67d3/1455654952642/raj-tents-simply-stunning-lounge.jpg" %>
+    <%= image_tag "Blog-Intro-Pic-02-Elegant-Affairs.jpg" %>
+    <%= image_tag "41f84532914cdd235b704f4090189495.jpg" %>
+    <%= image_tag "https://i.imgur.com/0RjIMza.jpg?1" %>
+    <%= image_tag "https://static1.squarespace.com/static/521be5abe4b0d492d86da9f8/t/54ea9169e4b0a4e937b05ac9/1424658806699/" %>
+    <%= image_tag "50b170e0c6a3284d31fe73a1bc1af402.jpg" %>
+    <%= image_tag "https://d1zpvjny0s6omk.cloudfront.net/media/cache/92/23/9223d6689ed4a3f5cc15fe77e35e1597.jpg" %>
+    <%= image_tag "https://weddinginvitationstalk.files.wordpress.com/2015/04/westin-wedding-ceremony-by.jpg" %>
+  </figure>
+</div>
+<style>
+body 
+#slidy-container { 
+  width: 70%; overflow: hidden; margin: 0 auto;
+}
+</style>
+<script>
+var timeOnSlide = 3,        
+    // the time each image will remain static on the screen, measured in seconds
+timeBetweenSlides = 1,  
+    // the time taken to transition between images, measured in seconds
+
+// test if the browser supports animation, and if it needs a vendor prefix to do so
+    animationstring = 'animation',
+    animation = false,
+    keyframeprefix = '',
+    domPrefixes = 'Webkit Moz O Khtml'.split(' '), 
+    // array of possible vendor prefixes
+    pfx  = '',
+    slidy = document.getElementById("slidy"); 
+if (slidy.style.animationName !== undefined) { animation = true; } 
+// browser supports keyframe animation w/o prefixes
+
+if( animation === false ) {
+  for( var i = 0; i < domPrefixes.length; i++ ) {
+    if( slidy.style[ domPrefixes[i] + 'AnimationName' ] !== undefined ) {
+      pfx = domPrefixes[ i ];
+      animationstring = pfx + 'Animation';
+      keyframeprefix = '-' + pfx.toLowerCase() + '-';
+      animation = true;
+      break;
+    }
+  }
+}
+
+if( animation === false ) {
+  // animate in JavaScript fallback
+} else {
+  var images = slidy.getElementsByTagName("img"),
+      firstImg = images[0], 
+      // get the first image inside the "slidy" element.
+      imgWrap = firstImg.cloneNode(false);  // copy it.
+  slidy.appendChild(imgWrap); // add the clone to the end of the images
+  var imgCount = images.length, // count the number of images in the slide, including the new cloned element
+      totalTime = (timeOnSlide + timeBetweenSlides) * (imgCount - 1), // calculate the total length of the animation by multiplying the number of _actual_ images by the amount of time for both static display of each image and motion between them
+      slideRatio = (timeOnSlide / totalTime)*100, // determine the percentage of time an induvidual image is held static during the animation
+      moveRatio = (timeBetweenSlides / totalTime)*100, // determine the percentage of time for an individual movement
+      basePercentage = 100/imgCount, // work out how wide each image should be in the slidy, as a percentage.
+      position = 0, // set the initial position of the slidy element
+      css = document.createElement("style"); // start marking a new style sheet
+  css.type = "text/css";
+  css.innerHTML += "#slidy { text-align: left; margin: 0; font-size: 0; position: relative; width: " + (imgCount * 100) + "%;  }\n"; // set the width for the slidy container
+  css.innerHTML += "#slidy img { float: left; width: " + basePercentage + "%; }\n";
+  css.innerHTML += "@"+keyframeprefix+"keyframes slidy {\n"; 
+  for (i=0;i<(imgCount-1); i++) { // 
+    position+= slideRatio; // make the keyframe the position of the image
+    css.innerHTML += position+"% { left: -"+(i * 100)+"%; }\n";
+    position += moveRatio; // make the postion for the _next_ slide
+    css.innerHTML += position+"% { left: -"+((i+1) * 100)+"%; }\n";
+}
+  css.innerHTML += "}\n";
+  css.innerHTML += "#slidy { left: 0%; "+keyframeprefix+"transform: translate3d(0,0,0); "+keyframeprefix+"animation: "+totalTime+"s slidy infinite; }\n"; // call on the completed keyframe animation sequence
+document.body.appendChild(css); // add the new stylesheet to the end of the document
+}
+</script>
+</div>
+</div>
+</div><br /><br />
+
+
+<div class="col-md-12">
+<div style="border-top:1px solid #0088cc;  color: #ff48ff;">
+</div><br /><br />
+</div>
+
+
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12">
+<!-- Inspired by: https://codepen.io/donovanh/pen/dYqxNb -->
+<div class="rating">
+  <input type="checkbox" autocomplete="off" id="smile" name="smiley" />
+  <label class="smiley" for="smile" title="Smile" aria-hidden="true"></label>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+</div>
+</div>
+</div>
+
+<!--*********** !-->
+<div class="footer-social-icons">
+    <h2 class="_14" style="text-align: center;color: #c29e00;margin-top: 12%;">FOLLOW US</h2>
+    <ul class="social-icons" style="text-align: center;margin-top: 10%;">
+        <li><a href="https://www.facebook.com/roshnitents05/?modal=admin_todo_tour" class="social-icon" title="Facebook" style="text-decoration: none;
+    color: white;"> <i class="fa fa-facebook"></i></a></li>
+        <li><a href="https://twitter.com/roshni_tents" class="social-icon" title="Twitter"> <i class="fa fa-twitter"></i></a></li>
+        <li><a href="https://www.instagram.com/roshnitents_/" class="social-icon" title="Instagram"> <i class="fa fa-instagram"></i></a></li>
+        <li><a href="https://www.youtube.com/channel/UC_eoEIZ7hwbyRa1lpstiLrQ" class="social-icon" title="Youtube"> <i class="fa fa-youtube"></i></a></li>
+        <li><a href="https://www.linkedin.com/company/roshni-tents/" class="social-icon" title="Linkedin"> <i class="fa fa-linkedin"></i></a></li>
+    </ul>
+</div>
+
+<div class="col-md-12">
+<div style="border-top:3px solid #0088cc;  color: #ff48ff;margin-top: 2%;">
+</div>
+</div>
+
+
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+ 
+}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #2492ff;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+#myBtn:hover {
+  background-color: #555;
+}
+</style>
+</head>
+<body>
+<button onclick="topFunction()" id="myBtn" title="Go to top">&#9650;</button>
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+
+</body>
+</html>

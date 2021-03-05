@@ -1,0 +1,200 @@
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Great Vibes' rel='stylesheet'>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none;}
+</style>
+<body>
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-8">
+<h2 style="text-align: left;margin-top: 5%;">
+<span style="color: #ff48ff;">
+ <i>Awesome Wedding Destinations in INDIA</i></span></h2>
+<time id="" class="published" datetime="2018-01-11">January 11, 2018</time><br /><br />
+<img src="https://media.publika.md/en/image/201610/full/indian-wedding-_84713100.jpg"  style="height: 400px; padding: 5px; width: 825px;"><br /><br />
+</div>
+<div class="col-md-4">
+<!-- 1. classic wedding image part start -->
+<h3 style="color: #c29e00; margin-top: 12%;margin-left: 10%;">Explore our Blog</h3><br />
+<form novalidate="novalidate" class="col-sm-12" id="searchForm">
+  
+    <div class="form-group " style="width: 60%;margin-left: 6%;">
+    <div class="row">
+    
+    <div class="col-md-10 col-xs-10" style="padding-right:0px"><div class="input-group input-group-lg center-block">
+        <select aria-invalid="false" name="category" style="border-top-left-radius: 2em; border-bottom-left-radius: 2em;" class="form-control valid">
+        <option><li><%= link_to "Awesome Wedding Destinations in INDIA",  homes_wedding_path, :mehtod=> 'get' %></li></option>
+        </select>
+        
+      </div></div>
+    <div class="col-md-2 col-xs-2" style="padding-left:0px"><div align="center"><button type="submit" class="btn btn-lg blue" style="border-top-right-radius: 2em; border-bottom-right-radius: 2em;transform:none;color:#FFFFFF;    border: 1px solid #3aa9a2;background: #3aa9a2"><span class="fa fa-search"></span>Search</button></div></div>
+    </div>
+    </div>
+  </form>
+</div>
+</div>
+</div>
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-8">
+<p class="lead" style="font-size:20px;color: black;"><p>Congratulations on finding your life partner! It must feel awesome. So now what? What comes next? Wedding planning……right!<br /><br />
+You are surely thinking of some grand wedding ceremony. Well, its India. Wedding is a grand occasion for us afterall.<br /><br />
+Of course you want a wedding away from the hectic busy life. A few days away from all the worries, A few days in peace. To achieve that, you need to choose the best destination.<br /><br />
+A few of our grand India’s grand wedding destinations are-<br /><br />
+<ul><li style="margin-left: 5%"><b style="color: #c29e00;">1. Udaipur (A symbol of royalty)-</b> If you wanna make your wedding day romantic and special, I hope the City of lakes would make your dream come true. Udaipur, the most loving and stunning place in Rajasthan is simply awesome for a traditional Indian wedding and so stands as one of the renowned Indian wedding destinations. The Leela, The Taj Lake Palace, and The Trident are some of the best options that you will like to enjoy being at. The architecture of this city perfectly blends innovation with tradition, offering the perfect backdrop for your dream wedding. So, choose from some of the exotic spots and have the day of your life.</li></ul>
+</p><br/ >
+
+<a target="_blank" href="https://www.i-escape.com/image/hotel/deogarh-mahal/overview/147585.jpg">
+ <img src="https://www.i-escape.com/image/hotel/deogarh-mahal/overview/147585.jpg" alt="" style="height: 400px; padding: 5px; width: 825px;">
+  </a><br />
+<br />
+<ul><li style="margin-left: 5%"><b style="color: #c29e00;">2. Jaipur (Royalty at your feet)-</b> The pink city of India is another famous destination for wedding. Offering a great heritage and beauty, this city is quite popular for extravagant wedding celebrations that always take place in palaces and mansions. The city itself showcases a complete combination of festive ideas and venue choices that hold out from palaces like Raj Palace, Gold Palace and Samode Palace. The city has so far solicited not only Indians but also the Hollywood celebrities too.</li></ul>
+</p><br/ >
+
+<a target="_blank" href="http://www.myweddingplanning.in/blog/wp-content/uploads/sites/11/wedding-at-city-palace-jaipur.jpg">
+ <img src="http://www.myweddingplanning.in/blog/wp-content/uploads/sites/11/wedding-at-city-palace-jaipur.jpg" alt="" style="height: 400px; padding: 5px; width: 825px;">
+  </a><br />
+<br />
+</div>
+ </div>
+ </div>
+
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-6">
+<%= link_to '<button type="button" class="block" style="font-family: Verdana,sans-serif;margin-left: 0%;width: 20%;background-color: white;color: #2492ff; ">&laquo; previous</button>'.html_safe, homes_blog_path,style: "color: white",data: { turbolinks: false } %> 
+ <!-- ending block button for classic wedding -->
+<style>
+.block {
+    text-align: center;
+    display: block;
+    width: 20%;
+    border: none;
+    background-color: white;
+    padding: 8px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    color: white
+}
+</style>
+</div>
+<div class="col-md-6">
+<%= link_to '<button type="button" class="block" style="font-family: Verdana,sans-serif;margin-left: 75%;background-color: white;color: #2492ff;">Next &raquo;</button>'.html_safe, homes_blog_path,style: "color: white" %> 
+ <!-- ending block button for classic wedding -->
+<style>
+.block {
+    text-align: center;
+    display: block;
+    width: 20%;
+    border: none;
+    background-color: #48D1CC;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    color: white
+}
+</style>
+<br />
+</div>
+</div>
+</div>
+<div class="col-md-12">
+<div style="border-top:1px solid #0088cc;  color: #ff48ff;">
+</div>
+</div>
+
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12">
+  <!-- start the commnet form in html page !-->
+<h3 style="color:  #ff48ff;margin-top: 5%;font-size: 1.618em;word-wrap: break-word;font-family: 'Great Vibes';font-size: 35px;text-align: center;">Leave a Reply</h3>
+<p style="margin-top: 2%; color: black;margin-left: 5%;">
+<ul style="margin-left: 4%; color: black;">
+<h4 id="comment_count" style="color: #c29e00;"><%= pluralize(@comments.size, 'Comment') %></h4>
+ <% @comments.each do |comment| %><br />
+  <% if comment.comment %>
+  <li>
+  <span class="glyphicon glyphicon-user"></span>&nbsp;
+   <strong style="color: #2492ff;"><%= comment.name %>&nbsp;</strong>     
+     <%= comment.time %>&nbsp;&nbsp;&nbsp;&nbsp;<strong><%= link_to '<button type="button" style="background-color: white;color: #2492ff;">Delete</button>' .html_safe,  comment_path(comment),style: "color: white",
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></strong>
+  
+    <p style="margin-left: 2%;"><%= comment.comment %></p>
+
+     </li>
+   <% end %>
+<% end %>
+</ul>
+<ul style="margin-left: 4%;">
+<%= form_with scope: :comment, url:  comments_path, local: true do |f| %>
+  <p>
+    <%= f.text_field :name, autofocus: true, placeholder: "Your name" %></p>
+    <p>
+ <%= f.text_area :comment, autofocus: true, placeholder: "Your comment" %></p>
+ <p>
+ <p>
+     <%= f.submit "Post Comment", :class => 'btn btn-primary', style: "background-color: #2492ff" %>
+  </p>
+<% end %>
+</ul>
+</p>
+</div>
+</div>
+</div>
+<div class="col-md-12">
+<div style="border-top:3px solid #0088cc;  color: #ff48ff;margin-top: 2%;">
+</div>
+</div>
+
+<!--Top button in footer code !-->
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+ 
+}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #2492ff;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+#myBtn:hover {
+  background-color: #555;
+}
+</style>
+</head><body>
+<button onclick="topFunction()" id="myBtn" title="Go to top">&#9650;</button>
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+<!--Top button in footer code !-->
+</body>
+</html>

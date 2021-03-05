@@ -1,0 +1,349 @@
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href='https://fonts.googleapis.com/css?family=Great Vibes' rel='stylesheet'>
+<style>
+.mySlides {display:none;}
+</style>
+<body style="font-size: 14px;">
+<div class="container-fluid">
+<div class="navbar-header">
+<h3 style="color: #2492ff
+">Wedding Event</h3></div>
+<ul class="nav navbar-nav navbar-right">
+<li><%= link_to "Home" , homes_index_path,style: "color: #ea4e74",data: { turbolinks: false } %></li><li style="margin-top: 9%;">&gt</li> 
+<li class="active"><%= link_to "Wedding Events" , homes_wedding_path,style: "color: #2492ff" %></li></ul>
+</div>
+<div class="w3-content w3-section" style="max-width:800px; display: block;    
+">
+  <img class="mySlides" src="https://d397bfy4gvgcdm.cloudfront.net/75420-Yogi-Patel-Global-Photography-1387-Yogi-Patel-Global-Photography_.jpeg" style="width:100%;height: 3%;    vertical-align: middle;height: 500px;float: left;position: relative;display: list-item;">
+  <img class="mySlides" src="https://images.shaadisaga.com/shaadisaga_production/photos/pictures/000/206/072/new_medium/IMG_0251_20170709172205035.jpg?1502470876" style="width:100%; height: 5%;height: 500px;float: left;position: relative;display: list-item;">
+  <img class="mySlides" src="https://i.pinimg.com/originals/8d/12/58/8d1258490863b7541253aa103afbdc93.jpg" style="width:100%;height: 5%;height: 500px;float: left;position: relative;display: list-item;">
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+<br />
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12">
+<h2 style="text-align: left;margin-top: 5%;">
+<span style="color: #ff48ff;">
+<i>Extraordinary Weddings with Roshni Tents</i></span></h2>
+<p class="lead" style="font-size:20px;"><p>Roshni Tents luxury tenting makes your wedding come alive with personality and soul. Thereare lots of directions to go in creating the right environment for your wedding ceremony and reception. Our extensive range of tenting breathes life and authenticity into your wedding setting. There are lots of themes and variations on themes to make your wedding speak for you. There are also many details added at each stage of planning that add something special, from the venue, colors and season through to the menu and entertainment.<b>Follow the links below to explore our main wedding categories.</b>
+</p><br/ >
+<p>We also provide tenting to create lots of other great themes, some of our favorites for fabulous weddings are: vintage wedding, rustic wedding, wine country wedding, modern styled wedding, beach wedding, country garden wedding, New England wedding, Mediterranean wedding, art deco wedding, old Hollywood themed wedding and Luis XV themed wedding.
+</p><br />
+
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-4">
+<!-- 1. classic wedding image part start -->
+<h3 style="color: #c29e00; margin-left: 3%; text-align: center";>Classic Weddings</h3>
+</div>
+<div class="col-md-4">
+<!-- 2. classic wedding image part start -->
+<h3 style="color: #c29e00; margin-left: 5%; text-align: center";>Indian Weddings</h3>
+</div>
+<div class="col-md-4">
+<!-- 3. classic wedding image part start -->
+<h3 style="color: #c29e00; margin-left: 5%; text-align: center";>Destination Weddings</h3><br />
+</div>
+</div>
+</div>
+</div>
+
+<!-- 1. calssic wedding image part end -->
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-4">
+<a target="_blank" href="https://i.pinimg.com/736x/03/7b/d1/037bd114dcb70372f5f0276eeef04d00--tent-fabric-moroccan-party.jpg">
+ <img src="https://i.pinimg.com/736x/03/7b/d1/037bd114dcb70372f5f0276eeef04d00--tent-fabric-moroccan-party.jpg" alt="forest" style="height: 350px; padding: 5px; width: 400px;">
+  </a><br />
+  </div>
+<br />
+<!-- 2. calssic wedding image part end -->
+<div class="col-md-4">
+<a target="_blank" href="https://www.weddingbutlers.com/uploads/7/7/6/6/7766339/6368145.jpg?538">
+ <img src="https://www.weddingbutlers.com/uploads/7/7/6/6/7766339/6368145.jpg?538" alt="forest" style="height: 350px; padding: 5px; width: 400px;">
+  </a><br /></div>
+<br />
+
+<!-- 3. calssic wedding image part end -->
+<div class="col-md-4">
+<a target="_blank" href="https://i.pinimg.com/736x/8f/19/fb/8f19fb68ac201b41398338205c7b01f2--gazebos-raj.jpg">
+ <img src="https://i.pinimg.com/736x/8f/19/fb/8f19fb68ac201b41398338205c7b01f2--gazebos-raj.jpg" alt="forest" style="height: 350px; padding: 5px; width: 400px;"></a>
+<br />
+</div>
+</div>
+</div>
+<!-- 1. Adding block button for classic wedding -->
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-4">
+ <%= link_to '<button type="button" class="block" style="font-family: Verdana,sans-serif;">EXPLORE CLASSIC WEDDINGS</button>'.html_safe, homes_classic_wedding_path,style: "color: white" %> 
+ </div>
+<!-- ending block button for classic wedding -->
+<style>
+.block {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: #48D1CC;
+    padding: 20px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    color: white
+}
+</style>
+
+<!-- 2. Adding block button for classic wedding -->
+<div class="col-md-4">
+ <%= link_to '<button type="button" class="block" style="font-family: Verdana,sans-serif;">EXPLORE INDIAN WEDDINGS</button>'.html_safe, homes_indian_path,style: "color: white" %> 
+ </div>
+ <!-- ending block button for classic wedding -->
+<style>
+.block {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: #48D1CC;
+    padding: 20px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    color: white
+}
+</style>
+
+<!-- 3. Adding block button for classic wedding -->
+ <div class="col-md-4">
+<%= link_to '<button type="button" class="block" style="font-family: Verdana,sans-serif;color: white">EXPLORE DESTINATION WEDDINGS</button>'.html_safe, homes_destination_wedding_path,style: "color: white" %>
+ </div>
+ </div>
+ </div>
+<!-- ending block button for classic wedding -->
+<style>
+.block {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: #48D1CC;
+    padding: 20px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    color: white
+}
+</style>
+
+<!-- 1. Classic weddings content start -->
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-4">
+<p class="lead" style="font-size:20px;"><p>The classic wedding is elegant and enduring. It can lean towards the vintage or be more modern, be ivory and gold, jewel toned, or bold. The Classic Wedding is always sophisticated and worldly, confident without being brash, understated without being uninspired. There is lots of room for individuality and expression, underwritten by the security of tradition.</p>
+</div>
+
+<!-- classic weddings content end -->
+
+<!-- 2. Indian weddings content start -->
+<div class="col-md-4">
+<p class="lead" style="font-size:20px;"><p>Indian weddings are on many scales, from intimate celebrations to elaborate multi-day extravaganzas for hundreds of guests.<b>We love Indian Weddings!</b><%= link_to "Check our Indian Wedding Theme zone",homes_indian_path,style: "color: #2492ff"%> for Indian Wedding resources and lots of ideas for beautiful luxury tenting to create the perfect wedding for you and your family.
+</p>
+</div>
+<!-- Indian weddings content end -->
+
+<!-- 3. Destination weddings content start -->
+<div class="col-md-4">
+<p class="lead" style="font-size:20px;"><p>Headed to a special destination for your wedding? We have built up an excellent capability for destination weddings over the years. We know what it takes and take pride in being highly competent at providing exceptional service.
+<%= link_to "Find out more on our Destination Events page",homes_destination_wedding_path,style: "color: #2492ff"%></p>
+</div>
+</div>
+</div><br /><br />
+<!-- Destination weddings content end -->
+<div class="col-md-12">
+<div style="border-top:1px solid #0088cc;  color: #ff48ff;">
+</div><br /><br />
+</div>
+
+<!-- model image add in wedding page -->
+<div class="col-md-12">
+<h2 style="text-align: center;font-family: 'Great Vibes';font-size: 42px;">
+<span style="color: #ff48ff;">
+<i>Our Gallery</i></span></h2><br /><br />
+
+<div class="w3-row-padding">
+  <div class="w3-container w3-third">
+    <img src="http://floralsunshine.com/wp-content/uploads/2013/06/12-0602pendurthi-095-10.jpg" style="width:100%;cursor:pointer;height: 350px;
+    padding: 5px; /* Some padding */
+    width: 400px;" 
+    onclick="onClick(this)" class="w3-hover-opacity">
+  </div>
+  <div class="w3-container w3-third">
+    <img src="https://i.pinimg.com/736x/a3/e5/6a/a3e56a2f7833e308dd437e7bd4a4094d--wedding-tent-decorations-wedding-decor.jpg" style="width:100%;cursor:pointer;height: 350px;
+    padding: 5px; /* Some padding */
+    width: 400px;" 
+    onclick="onClick(this)" class="w3-hover-opacity">
+  </div>
+  <div class="w3-container w3-third">
+     <%= image_tag "IMG-20191223-WA0007.jpg", width: 400, height: 350, class: "w3-hover-opacity",onclick: "onClick(this)",:style=>"padding: 5px; cursor:pointer" ,data: { turbolinks: false } %>
+  </div>
+
+<div class="w3-container w3-third">
+    <img src="http://www.myweddingplanning.in/wp-content/uploads/White-Wedding-Mandap-Decor.jpg" style="width: 100%;cursor:pointer;height: 350px;
+    padding: 5px; /* Some padding */
+    width: 400px;" 
+    onclick="onClick(this)" class="w3-hover-opacity">
+  </div>
+
+  <div class="w3-container w3-third">
+    <img src="http://beautyandmakeuplove.com/wp-content/uploads/2017/11/goa-wedding-2-1.jpg" style="width:100%;cursor:pointer;height: 350px;
+    padding: 5px; /* Some padding */
+    width: 400px;" 
+    onclick="onClick(this)" class="w3-hover-opacity">
+  </div><br />
+
+  <div class="w3-container w3-third ">
+    <%= image_tag "IMG-20200301-WA0008.jpg", width: 400, height: 350, class: "w3-hover-opacity",onclick: "onClick(this)",:style=>"padding: 5px; cursor:pointer",data: { turbolinks: false } %>
+  </div>
+
+ <div class="w3-container w3-third ">
+    <img src="https://d397bfy4gvgcdm.cloudfront.net/138684-Image-232.jpeg" style="width:100%;cursor:pointer;height: 350px;
+    padding: 5px; /* Some padding */
+    width: 400px;" 
+    onclick="onClick(this)" class="w3-hover-opacity">
+  </div>
+
+<div class="w3-container w3-third ">
+    <img src="http://elenadamy.com/wp-content/uploads/2016/03/indian-weddings-los-cabos-destination-wedding-designers-elena-damy.jpg" style="width:100%;cursor:pointer;height: 350px;
+    padding: 5px; /* Some padding */
+    width: 400px;" 
+    onclick="onClick(this)" class="w3-hover-opacity">
+  </div>
+
+  <div class="w3-container w3-third ">
+    <img src="https://www.weddingsutra.com/images/wedding-images/plan_services/images/mandap_pic3.jpg" style="width:100%;cursor:pointer;height: 350px;
+    padding: 5px; /* Some padding */
+    width: 400px;" 
+    onclick="onClick(this)" class="w3-hover-opacity"><br /><br /><br/>
+  </div>
+
+  <div class="col-md-12">
+  <div style="border-top:1px solid #0088cc;  color: #ff48ff;">
+  </div><br /><br />
+  </div>
+
+</div>
+
+<div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+  <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+  <div class="w3-modal-content w3-animate-zoom">
+    <img id="img01" style="width:100%;">
+  </div>
+</div>
+
+<script>
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+}
+</script>
+</div>
+<!-- model image add end in wedding page -->
+</div>
+</div>
+
+
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12">
+<!-- Inspired by: https://codepen.io/donovanh/pen/dYqxNb -->
+<div class="rating">
+  <input type="checkbox" autocomplete="off" id="smile" name="smiley" />
+  <label class="smiley" for="smile" title="Smile" aria-hidden="true"></label>
+</div>
+</div>
+</div>
+</div>
+
+<!--*********** !-->
+<div class="footer-social-icons">
+    <h2 class="_14" style="text-align: center;color: #c29e00;margin-top: 12%;">FOLLOW US</h2>
+    <ul class="social-icons" style="text-align: center;margin-top: 10%;">
+        <li><a href="https://www.facebook.com/roshnitents05/?modal=admin_todo_tour" class="social-icon" title="Facebook" style="text-decoration: none;
+    color: white;"> <i class="fa fa-facebook"></i></a></li>
+        <li><a href="https://twitter.com/roshni_tents" class="social-icon" title="Twitter"> <i class="fa fa-twitter"></i></a></li>
+        <li><a href="https://www.instagram.com/roshnitents_/" class="social-icon" title="Instagram"> <i class="fa fa-instagram"></i></a></li>
+        <li><a href="https://www.youtube.com/channel/UC_eoEIZ7hwbyRa1lpstiLrQ" class="social-icon" title="Youtube"> <i class="fa fa-youtube"></i></a></li>
+        <li><a href="https://www.linkedin.com/company/roshni-tents/" class="social-icon" title="Linkedin"> <i class="fa fa-linkedin"></i></a></li>
+    </ul>
+</div>
+
+<div class="col-md-12">
+<div style="border-top:3px solid #0088cc;  color: #ff48ff;margin-top: 2%;">
+</div>
+</div>
+
+
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+ 
+}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #2492ff;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+#myBtn:hover {
+  background-color: #555;
+}
+</style>
+</head>
+<body>
+<button onclick="topFunction()" id="myBtn" title="Go to top">&#9650;</button>
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+</body>
+</html>
+

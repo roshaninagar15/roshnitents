@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+    <title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href='https://fonts.googleapis.com/css?family=Great Vibes' rel='stylesheet'>
+<style>
+.mySlides {display:none;}
+</style>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/half-slider.css" rel="stylesheet">
+</head>
+<body>
+
+
+<h2 style="font-family: 'Great Vibes';font-size: 42px;text-align: center;color: #ff48ff;">Welcome to Roshni Tents And Nagar's</h2><br />
+
+<div class="w3-content w3-section" style="max-height: 10%;max-width: 90%;">
+  
+  <img class="mySlides" src="https://cdn-images-1.medium.com/max/1600/1*6QLRlgkT8hWH9QS5Trmq1w.jpeg" style="width:100%;margin-bottom: 5%;height: 600px;width: 1152px;float: left; position: relative;display: list-item;">
+  <img class="mySlides" src="http://www.phonatetech.com/wp-content/uploads/2015/08/phonate-wedding-planner.jpg" style="width:100%;margin-bottom: 5%;height: 600px;
+  width: 1152px;float: left;position: relative;display: list-item;">
+
+  <img class="mySlides" src="http://khazanacreations.com/wp-content/uploads/2015/02/HS-KC-winter-wonderland-8623-1200x675.jpg" style="width:100%;margin-bottom: 5%;height: 600px;width: 1152px;float: left;position: relative;display: list-item;">
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+ 
+}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #2492ff;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+#myBtn:hover {
+  background-color: #555;
+}
+</style>
+</head>
+<body>
+<button onclick="topFunction()" id="myBtn" title="Go to top">&#9650;</button>
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12" style="margin-left: 1%;">
+<h2 style="font-family: 'Great Vibes';font-size: 42px;text-align: center;color: #ff48ff;">Events We Cover</h2><br />
+</div>
+</div>
+</div>
+<!--1. Event We Cover First Row images !-->
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-4">
+<%=link_to (image_tag "20210131_143816.jpg", width: 400, height: 350, class: "some css class here"), homes_wedding_path,data: { turbolinks: false } %>
+</div>
+<div class="col-md-4">
+<%=link_to (image_tag "IMG-20200301-WA0006.jpg", width: 400, height: 350, class: "some css class here"),  homes_classic_wedding_path,data: { turbolinks: false } %>
+</div>
+<div class="col-md-4">
+<%=link_to (image_tag "20210131_144054.jpg", width: 400, height: 350, class: "some css class here"), homes_destination_wedding_path,data: { turbolinks: false } %>
+</div>
+</div>
+</div><br />
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-4">
+ <%= link_to '<button type="button" class="block" style="font-family: Verdana,sans-serif;">EXPLORE WEDDINGS</button>'.html_safe, homes_wedding_path,style: "color: white",data: { turbolinks: false } %> 
+ </div>
+<!-- ending block button for classic wedding -->
+
+<style>
+.block {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: #48D1CC;
+    padding: 20px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    color: white
+}
+</style>
+<div class="col-md-4">
+ <%= link_to '<button type="button" class="block" style="font-family: Verdana,sans-serif;">EXPLORE CLASSIC WEDDINGS</button>'.html_safe, homes_classic_wedding_path,style: "color: white",data: { turbolinks: false } %> 
+ </div>
+<!-- ending block button for classic wedding -->
+<style>
+.block {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: #48D1CC;
+    padding: 20px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    color: white
+}
+</style>
+<div class="col-md-4">
+ <%= link_to '<button type="button" class="block" style="font-family: Verdana,sans-serif;">EXPLORE DESTINATION WEDDINGS</button>'.html_safe, homes_destination_wedding_path,style: "color: white",data: { turbolinks: false } %> 
+ </div>
+<!-- ending block button for classic wedding -->
+<style>
+.block {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: #48D1CC;
+    padding: 20px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    color: white
+}
+</style>
+</div>
+</div><br /><br />
+
+<!--2. Event We Cover Second Row images Ending !-->
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-4">
+<%=link_to (image_tag "https://businessfirstfamily.com/wp-content/uploads/2015/08/corporate-event-stage-view.jpg", width: 400, height: 350, class: "some css class here"), homes_corporate_events_path,data: { turbolinks: false } %>
+</div>
+<div class="col-md-4">
+<%=link_to (image_tag "unnamed(2).jpg", width: 400, height: 350, class: "some css class here"), homes_flower_decoration_path,data: { turbolinks: false } %>
+</div>
+<div class="col-md-4">
+<%=link_to (image_tag "Screenshot_20200622-110029_Facebook.jpg", width: 400, height: 350, class: "some css class here"),  homes_light_decoration_path,data: { turbolinks: false } %>
+</div>
+</div>
+</div><br />
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-4">
+ <%= link_to '<button type="button" class="block" style="font-family: Verdana,sans-serif;">EXPLORE CORPORATE EVENTS</button>'.html_safe, homes_corporate_events_path,style: "color: white",data: { turbolinks: false } %> 
+ </div>
+<!-- ending block button for classic wedding -->
+<style>
+.block {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: #48D1CC;
+    padding: 20px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    color: white
+}
+</style>
+<div class="col-md-4">
+ <%= link_to '<button type="button" class="block" style="font-family: Verdana,sans-serif;">EXPLORE FLOWER DECORATION</button>'.html_safe, homes_flower_decoration_path,style: "color: white",data: { turbolinks: false } %> 
+ </div>
+<!-- ending block button for classic wedding -->
+<style>
+.block {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: #48D1CC;
+    padding: 20px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    color: white
+}
+</style>
+<div class="col-md-4">
+ <%= link_to '<button type="button" class="block" style="font-family: Verdana,sans-serif;">EXPLORE Light DECORATION</button>'.html_safe,  homes_light_decoration_path,style: "color: white",data: { turbolinks: false } %> 
+ </div>
+<!-- ending block button for classic wedding -->
+<style>
+.block {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: #48D1CC;
+    padding: 20px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    color: white
+}
+</style>
+</div>
+</div><br /><br />
+<!--3. Event We Cover Third Row images Ending !-->
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-4">
+<%=link_to (image_tag "http://www.indiancatering.sg/blog/wp-content/uploads/2017/04/Caterers-in-Singapore-Indian-Catering.jpg", width: 400, height: 350, class: "some css class here"),  homes_catering_path,data: { turbolinks: false } %>
+</div>
+<div class="col-md-4">
+<%=link_to (image_tag "IMG-20180228-WA0102.jpg", width: 400, height: 350, class: "some css class here"), homes_view_more_path,data: { turbolinks: false } %>
+</div>
+<div class="col-md-4">
+<%=link_to (image_tag "O1CN011wHewPL7k38EEAZ_1708496283.jpg", width: 400, height: 350, class: "some css class here"), homes_view_more_path,data: { turbolinks: false } %>
+</div>
+</div>
+</div><br />
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-4">
+ <%= link_to '<button type="button" class="block" style="font-family: Verdana,sans-serif;">EXPLORE CATERING</button>'.html_safe,  homes_catering_path,style: "color: white",data: { turbolinks: false } %> 
+ </div>
+<!-- ending block button for classic wedding -->
+<style>
+.block {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: #48D1CC;
+    padding: 20px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    color: white
+}
+</style>
+<div class="col-md-4">
+ <%= link_to '<button type="button" class="block" style="font-family: Verdana,sans-serif;">EXPLORE ENGAGEMENT DECORATOR</button>'.html_safe, homes_view_more_path,style: "color: white",data: { turbolinks: false } %> 
+ </div>
+<!-- ending block button for classic wedding -->
+<style>
+.block {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: #48D1CC;
+    padding: 20px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    color: white
+}
+</style>
+<div class="col-md-4">
+ <%= link_to '<button type="button" class="block" style="font-family: Verdana,sans-serif;">EXPLORE BIRTHDAY VENUE</button>'.html_safe,homes_view_more_path,style: "color: white",data: { turbolinks: false } %><br /><br /> 
+ </div>
+<!-- ending block button for classic wedding -->
+<style>
+.block {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: #48D1CC;
+    padding: 20px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    color: white
+}
+</style>
+</div>
+</div>
+ <div class="col-md-12">
+  <div style="border-top:1px solid #0088cc;  color: #ff48ff;">
+  </div><br /><br />
+  </div>
+</div>
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12">
+<h2 style="font-family: 'Great Vibes';font-size: 42px;text-align: center;color: #ff48ff;">Our Gallery</h2>
+<h2 style="font-family: 'Great Vibes';text-align: center;color: #2492ff;">To make your special day a memorable one</h2>
+<p class="lead"><p style="margin-right: 7%;margin-left: 7%;text-align: center;font-size: 17px;color: black;">We turn your day of love into an unforgettable event and a day you will cherish for the rest of your life. At Roshni Tents and Nagar caters we work as a team to give you the perfect wedding day as envisioned by you. We focus on getting to know you, your preferences, likes and dislikes and customize the entire wedding experience as per your needs. Passionate about what we do, we strive to ensure all our celebrations are exceptional right from the initial preparation to the wedding day itself.</p><br/ ><br/>
+</div>
+</div>
+</div>
+
+<!-- model image add in wedding page -->
+<div class="col-md-12" style="margin-left: 3%;">
+<div class="w3-row-padding">
+ <div class="col-md-4" onclick="onClick(this)" class="w3-hover-opacity">
+    <%= image_tag "DSC_3426.JPG", height: 300, width: 300 %> 
+  </div> 
+
+<div class="col-md-4" onclick="onClick(this)" class="w3-hover-opacity">
+    <%= image_tag "IMG-20180228-WA0102.jpg", height: 300, width: 300 %> 
+  </div>
+
+  <div class="col-md-4" onclick="onClick(this)" class="w3-hover-opacity">
+    <%= image_tag "IMG-20180224-WA0038.jpg", height: 300, width: 300 %> 
+  </div>
+</div><br />
+<div class="w3-row-padding">
+<div class="col-md-4" onclick="onClick(this)" class="w3-hover-opacity">
+<%= image_tag "IMG-20180228-WA0101.jpg", height: 300, width: 300 %> 
+</div> 
+<div class="col-md-4" onclick="onClick(this)" class="w3-hover-opacity">
+<%= image_tag "DSC_3430.JPG", height: 300, width: 300 %> 
+</div>
+<div class="col-md-4" onclick="onClick(this)" class="w3-hover-opacity">
+<%= image_tag "IMG-20180228-WA0092.jpg", height: 300, width: 300 %> <br /><br />
+</div>
+</div>
+</div>
+ <div class="col-md-12">
+  <div style="border-top:1px solid #0088cc;  color: #ff48ff;">
+  </div><br /><br />
+  </div>
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12">
+<!-- Inspired by: https://codepen.io/donovanh/pen/dYqxNb -->
+<div class="rating">
+  <input type="checkbox" autocomplete="off" id="smile" name="smiley" />
+  <label class="smiley" for="smile" title="Smile" aria-hidden="true"></label>
+</div>
+</div>
+</div>
+</div>
+<!--*********** !-->
+<div class="footer-social-icons">
+    <h2 class="_14" style="text-align: center;color: #c29e00;margin-top: 12%;">FOLLOW US</h2>
+    <ul class="social-icons" style="text-align: center;margin-top: 10%;">
+        <li><a href="https://www.facebook.com/roshnitents05/?modal=admin_todo_tour" class="social-icon" title="Facebook" style="text-decoration: none;
+    color: white;"> <i class="fa fa-facebook"></i></a></li>
+        <li><a href="https://twitter.com/roshni_tents" class="social-icon" title="Twitter"> <i class="fa fa-twitter"></i></a></li>
+        <li><a href="https://www.instagram.com/roshnitents_/" class="social-icon" title="Instagram"> <i class="fa fa-instagram"></i></a></li>
+        <li><a href="https://www.youtube.com/channel/UC_eoEIZ7hwbyRa1lpstiLrQ" class="social-icon" title="Youtube"> <i class="fa fa-youtube"></i></a></li>
+        <li><a href="https://www.linkedin.com/company/roshni-tents/" class="social-icon" title="Linkedin"> <i class="fa fa-linkedin"></i></a></li>
+    </ul>
+</div>
+
+<div class="col-md-12">
+<div style="border-top:3px solid #0088cc;  color: #ff48ff;margin-top: 2%;">
+</div>
+</div>
+
+</body>
+</html>

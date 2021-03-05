@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <link href='https://fonts.googleapis.com/css?family=Great Vibes' rel='stylesheet'>
+ <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+       position: relative;
+       overflow: hidden;
+       width: 100%;
+       float: right;
+       height: 60%;
+       line-height: 0;  
+
+        
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body  {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+ 
+    }
+    </style>
+  <body>
+<!-- Starting the slider in contcat page !-->
+<div class="container-fluid">
+<div class="navbar-header">
+<h3 style="color: #2492ff; 
+">Contact Us</h3></div>
+<ul class="nav navbar-nav navbar-right">
+<li><%= link_to "Home" , homes_index_path,style: "color: #ea4e74",data: { turbolinks: false } %></li> 
+<li style="margin-top: 9%;">&gt</li>
+<li class="active"><%= link_to "Contact Us" , new_coffee_roast_path, data: { turbolinks: false },style: "color: #2492ff" %></li></ul>
+</div>
+<h3 style="color: #ff48ff;text-align: center;font-family: 'Great Vibes';font-size: 35px;
+">Contact Roshni Tents</h3><br />
+<p style="font-family: 'lato-regular', arial, sans-serif;font-size: 15px;line-height: 27px;color: #000000;text-align: center;letter-spacing: 0.5px;">Our hearts are connected with your's by decoration and food but we are still a phone call away!<br />
+Get to us via phone or e-mail and we will be happy to assist you.</p><br /><br />
+<!-- Ending the slider in contcat page !-->
+<div id="map"></div>
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12">
+ <script>
+// This example displays a marker at the center of Australia.
+      // When the user clicks the marker, an info window opens.
+
+      function initMap() {
+        var uluru = {lat: 23.170550, lng: 75.784385};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: uluru
+           
+        });
+
+        var contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h5 id="firstHeading" class="firstHeading"><strong>Nagar Caters And Roshni Tent</strong></h5>'+
+            '<div id="bodyContent">'+
+             '<p>348/9 Shastri Nagar Colony,Ujjain,(M.P.) 456010</p>'+
+             '<a href="https://www.google.com/maps/place/NAGAR+CATERS+%26+ROSHNI+TENT/@23.1705548,75.7821915,17z/data=!4m5!3m4!1s0x39637467faaaaaab:0x26064e22a94b2cc0!8m2!3d23.1705499!4d75.7843855?hl=en-US">View More Large</a>'+
+            '</div>'+
+            '</div>';
+
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+
+
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map,
+          title: 'Nagar Caters And Roshni Tent'
+        });
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+      }
+</script><br /><br />
+</div>
+ </div>
+ </div>
+
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-6">
+<h3 style="color: #c29e00;margin-left: 10%;
+">Office Address</h3>
+<p style="color: #000000;font-size: 15px;margin-left: 10%;letter-spacing: 0.5px;">348/9 Shastri Nagar Colony,
+<br>
+Ujjain,(M.P) 456010
+</p>
+
+
+<h3 style="color: #c29e00;margin-left: 10%;
+">Write to us</h3>
+<p style="color: #000000;font-size: 15px;margin-left: 10%;letter-spacing: 0.5px;">Enquries :
+<i class="fa fa-envelope-o" style="margin-right: 10px;width: 20px;text-align: center;"></i>
+info@roshnitent.com<br>
+Catering Enquries :
+<i class="fa fa-envelope-o" style="margin-right: 10px;width: 20px;text-align: center;"></i>
+info@roshnitent.com
+</p>
+
+<h3 style="color: #c29e00;margin-left: 10%;
+">Call Us</h3>
+<p style="color: #000000;font-size: 15px;margin-left: 10%;letter-spacing: 0.5px;">
+<i class="fa fa-phone" style="margin-right: 10px;width: 20px;text-align: center;"></i>
++91 8827047626<br>
+<i class="fa fa-phone" style="margin-right: 10px;width: 20px;text-align: center;"></i>
++91 9329282425<br>
+</p>
+</div>
+<div class="col-md-4">
+<h3 style="color: #ff48ff;margin-left: 4%;font-family: 'Great Vibes';font-size: 35px;
+">Contact Form</h3><br />
+
+<%= form_with(model: coffee_roast, local: true) do |form| %>
+  <% if coffee_roast.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(coffee_roast.errors.count, "error") %> prohibited this coffee_roast from being saved:</h2>
+
+      <ul>
+      <% coffee_roast.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p style="margin-left: 4%;color: black;">
+    <%= form.label :username %>
+     <%= form.text_field :username, id: :coffee_roast_username %>
+  </p><br />
+ 
+  <p style="margin-left: 4%;color: black;">
+    <%= form.label :mobile_number %>
+    <%= form.text_field :mobile_number, id: :coffee_roast_mobile_number %>
+  </p><br />
+
+  <p style="margin-left: 4%;color: black;">
+    <%= form.label :email_id %>
+    <%= form.text_field :email_id, id: :coffee_roast_email_id %>
+  </p><br />
+</div>
+<div class="col-md-2" style="margin-top: 7%;">
+  <p style="float: right;color: black; margin-right: 20%;">
+   <%= form.label :occasion %>
+    <%= form.text_field :occasion, id: :coffee_roast_occasion %>
+  </p><br />
+ <p style="float: right;color: black;margin-right: 20%;">
+   <%= form.label :query %>
+   <%= form.text_area :query, id: :coffee_roast_query %>
+  </p><br />
+<p>
+ <%= form.submit "Send", :class => 'btn btn-primary', style: "background-color: #2492ff" %>
+  </p>
+  </div>
+<% end %>
+</div>
+</div>
+</div>
+</div><br /><br />
+
+ <div class="col-md-12">
+  <div style="border-top:1px solid #0088cc;  color: #ff48ff; margin-top: 3%;">
+  </div>
+  </div>
+
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12">
+<!-- Inspired by: https://codepen.io/donovanh/pen/dYqxNb -->
+<div class="rating">
+  <input type="checkbox" autocomplete="off" id="smile" name="smiley" />
+  <label class="smiley" for="smile" title="Smile" aria-hidden="true"></label>
+</div>
+</div>
+</div>
+</div>
+<!--*********** !-->
+<div class="footer-social-icons">
+    <h2 class="_14" style="text-align: center;color: #c29e00;margin-top: 15%;">FOLLOW US</h2>
+    <ul class="social-icons" style="text-align: center;margin-top: 10%;">
+        <li><a href="https://www.facebook.com/roshnitents05/?modal=admin_todo_tour" class="social-icon" title="Facebook" style="text-decoration: none;
+    color: white;"> <i class="fa fa-facebook"></i></a></li>
+        <li><a href="https://twitter.com/roshni_tents" class="social-icon" title="Twitter"> <i class="fa fa-twitter"></i></a></li>
+        <li><a href="https://www.instagram.com/roshnitents_/" class="social-icon" title="Instagram"> <i class="fa fa-instagram"></i></a></li>
+        <li><a href="https://www.youtube.com/channel/UC_eoEIZ7hwbyRa1lpstiLrQ" class="social-icon" title="Youtube"> <i class="fa fa-youtube"></i></a></li>
+        <li><a href="https://www.linkedin.com/company/roshni-tents/" class="social-icon" title="Linkedin"> <i class="fa fa-linkedin"></i></a></li>
+    </ul>
+</div>
+
+<div class="col-md-12">
+<div style="border-top:3px solid #0088cc;  color: #ff48ff;margin-top: 2%;">
+</div>
+</div>
+
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+ 
+}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #2492ff;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+#myBtn:hover {
+  background-color: #555;
+}
+</style>
+</head>
+<body>
+<button onclick="topFunction()" id="myBtn" title="Go to top">&#9650;</button>
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+
+</body>
+</html>

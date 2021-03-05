@@ -1,0 +1,298 @@
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href='https://fonts.googleapis.com/css?family=Great Vibes' rel='stylesheet'>
+<style>
+.mySlides {display:none;}
+</style>
+<body>
+
+<div class="container-fluid">
+<div class="navbar-header">
+<h3 style="color: #2492ff
+">Moroccan Themes</h3></div>
+<ul class="nav navbar-nav navbar-right">
+<li><%= link_to "Home" , homes_index_path,style: "color: #ea4e74",data: { turbolinks: false } %></li> 
+<li style="margin-top: 10%;">&gt</li>
+<li class="active"><%= link_to "Moroccan" , homes_moroccan_path,style: "color: #2492ff" %></li></ul>
+</div> 
+<div class="w3-content w3-section" style="max-width:800px; display: block;    
+">
+<%= image_tag "bf1e90f73282394b5bfb741b2e8e971c.jpg", height: 500, class: "mySlides",:style=>"width: 100%; vertical-align: middle; height: 500px; float: left; position: relative; display: list-item;" %>
+ <img class="mySlides" src="https://i.pinimg.com/originals/2e/52/76/2e527691dd2a7bf83c29b58db974cf46.jpg" style="width:100%; height: 5%;height: 500px;float: left;position: relative;display: list-item;">
+<%= image_tag "a57a5330f2faf2004440e5c38234d040.jpg", height: 500, class: "mySlides",:style=>"width: 100%; vertical-align: middle; height: 500px; float: left; position: relative; display: list-item;" %></div>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+<br />
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12">
+<h2 style="text-align: left;margin-top: 5%;">
+<span style="color: #ff48ff;">
+<i>Moroccan Themed Parties and Events</i></span></h2>
+<p class="lead" style="font-size:20px;"><p>Morocco has been influenced by many cultures throughout its history and returns the favor, reflecting back a style that is cosmopolitan, mysterious, dramatic and yet friendly and welcoming. Some of our favorite events have been Moroccan themed, allowing for strong design elements like arches, vivid contrasting colors, and elaborate lighting. Arabian Nights, 1,001 Nights, Midnight at the Oasis and Rock the Kasbah themes are corporate Holiday Party favorites as well as a great choice for a private birthday party theme.
+</p><br/ ><br />
+
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-6">
+<!-- 1. classic wedding image part start -->
+<h3 style="color: #c29e00; margin-left: 3%";>Arabian Nights Theme Galas</h3>
+</div>
+<div class="col-md-6">
+<h3 style="color: #c29e00; margin-left: 3%";>Moroccan Theme Parties</h3><br />
+</div>
+</div>
+</div>
+
+<!-- model image add in wedding page -->
+    
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-6">
+ <img src="https://i.pinimg.com/736x/91/fe/38/91fe38e5c4f3b3d14e335f627b65df0e--arabian-nights-prom-arabian-nights-theme.jpg" style="
+width: 90%;cursor:pointer;" 
+    onclick="onClick(this)" class="w3-hover-opacity">
+     </div>
+<div class="col-md-6">
+  <img src="https://static1.squarespace.com/static/56589d96e4b0c377c45acf92/569d52fa89a60a5a2b792516/56c39c250442622fa9f0ddf5/1455660076653/raj-tents-moroccan-theme-colorful-party-cabana.jpg" style="width:90%;cursor:pointer" 
+    onclick="onClick(this)" class="w3-hover-opacity"><br />
+    </div>
+    </div>
+<div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+  <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+  <div class="w3-modal-content w3-animate-zoom">
+    <img id="img01" style="width:100%">
+  </div>
+</div>
+
+
+<script>
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+}
+</script>
+</div>
+<!-- model image add end in wedding page -->
+
+<!-- 1. Classic weddings content start -->
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-6">
+<p class="lead" style="font-size:20px;"><p><b>Arabian Nights</b> is a perennial favorite theme for Gala celebrations of all kinds.</p>
+</div>
+<!-- classic weddings content end -->
+<!-- Elegant Parties and Gatherings content start -->
+<div class="col-md-6">
+<p class="lead" style="font-size:20px;"><p><b>Strong designs and deep, rich colors</b> typify the Moroccan theme. Roshni Tents extensive inventory will really ‘Rock the Kasbah’ for you. </p><br /><br />
+</div>
+<!-- Elegant Parties and Gatherings content start -->
+</div>
+</div>
+</div>
+<div class="col-md-12">
+  <div style="border-top:1px solid #0088cc;  color: #ff48ff;">
+  </div><br /><br />
+  </div>
+</div>
+
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12">
+<h2 style="text-align: center;font-family: 'Great Vibes';font-size: 42px;">
+<span style="color: #ff48ff;">
+<i>Explore the Moroccan Theme</i></span></h2><br /><br /><br />
+<!-- bottom images slider in html page start !-->
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12">
+<div id="slidy-container">
+  <figure id="slidy">
+   <%= image_tag "https://i.pinimg.com/originals/2e/52/76/2e527691dd2a7bf83c29b58db974cf46.jpg" %>
+   <%= image_tag "http://elenadamy.com/wp-content/uploads/2016/03/indian-weddings-los-cabos-destination-wedding-designers-elena-damy.jpg" %>
+   <%= image_tag "https://i.pinimg.com/736x/03/7b/d1/037bd114dcb70372f5f0276eeef04d00--tent-fabric-moroccan-party.jpg" %>
+   <%= image_tag "moroccan-themed-interior-001-dp-marquees.jpg" %>
+   <%= image_tag "e29ad3a3a40016065a79c46e7825207c.jpg" %>
+   <%= image_tag "http://www.fnpweddings.com/wp-content/uploads/2015/07/FNP-Wedding-Image-2.jpg" %>
+   <%= image_tag "https://media.weddingz.in/images/3a9ff5113a53507426256b96c838a138/would-you-try-these-moroccan-wedding-decoration-ideas-at-your-indian-wedding.jpg" %>
+   <%= image_tag "102286-HL_0001.jpeg" %>
+   <%= image_tag "https://i.pinimg.com/736x/91/fe/38/91fe38e5c4f3b3d14e335f627b65df0e--arabian-nights-prom-arabian-nights-theme.jpg" %>
+   <%= image_tag "http://www.rubiesandribbon.com/wp-content/uploads/2013/06/Moroccan-Mehndi-2-Photo.jpg" %>
+   <%= image_tag "https://i0.wp.com/somoroccan.com/wp-content/uploads/2015/08/rahal1.jpg" %>
+   <%= image_tag "https://images.shaadisaga.com/shaadisaga_production/photos/pictures/000/206/072/new_medium/IMG_0251_20170709172205035.jpg?1502470876" %>
+  </figure>
+</div>
+<style>
+body 
+#slidy-container { 
+  width: 70%; overflow: hidden; margin: 0 auto;
+}
+</style>
+<script>
+var timeOnSlide = 3,        
+    // the time each image will remain static on the screen, measured in seconds
+timeBetweenSlides = 1,  
+    // the time taken to transition between images, measured in seconds
+
+// test if the browser supports animation, and if it needs a vendor prefix to do so
+    animationstring = 'animation',
+    animation = false,
+    keyframeprefix = '',
+    domPrefixes = 'Webkit Moz O Khtml'.split(' '), 
+    // array of possible vendor prefixes
+    pfx  = '',
+    slidy = document.getElementById("slidy"); 
+if (slidy.style.animationName !== undefined) { animation = true; } 
+// browser supports keyframe animation w/o prefixes
+
+if( animation === false ) {
+  for( var i = 0; i < domPrefixes.length; i++ ) {
+    if( slidy.style[ domPrefixes[i] + 'AnimationName' ] !== undefined ) {
+      pfx = domPrefixes[ i ];
+      animationstring = pfx + 'Animation';
+      keyframeprefix = '-' + pfx.toLowerCase() + '-';
+      animation = true;
+      break;
+    }
+  }
+}
+
+if( animation === false ) {
+  // animate in JavaScript fallback
+} else {
+  var images = slidy.getElementsByTagName("img"),
+      firstImg = images[0], 
+      // get the first image inside the "slidy" element.
+      imgWrap = firstImg.cloneNode(false);  // copy it.
+  slidy.appendChild(imgWrap); // add the clone to the end of the images
+  var imgCount = images.length, // count the number of images in the slide, including the new cloned element
+      totalTime = (timeOnSlide + timeBetweenSlides) * (imgCount - 1), // calculate the total length of the animation by multiplying the number of _actual_ images by the amount of time for both static display of each image and motion between them
+      slideRatio = (timeOnSlide / totalTime)*100, // determine the percentage of time an induvidual image is held static during the animation
+      moveRatio = (timeBetweenSlides / totalTime)*100, // determine the percentage of time for an individual movement
+      basePercentage = 100/imgCount, // work out how wide each image should be in the slidy, as a percentage.
+      position = 0, // set the initial position of the slidy element
+      css = document.createElement("style"); // start marking a new style sheet
+  css.type = "text/css";
+  css.innerHTML += "#slidy { text-align: left; margin: 0; font-size: 0; position: relative; width: " + (imgCount * 100) + "%;  }\n"; // set the width for the slidy container
+  css.innerHTML += "#slidy img { float: left; width: " + basePercentage + "%; }\n";
+  css.innerHTML += "@"+keyframeprefix+"keyframes slidy {\n"; 
+  for (i=0;i<(imgCount-1); i++) { // 
+    position+= slideRatio; // make the keyframe the position of the image
+    css.innerHTML += position+"% { left: -"+(i * 100)+"%; }\n";
+    position += moveRatio; // make the postion for the _next_ slide
+    css.innerHTML += position+"% { left: -"+((i+1) * 100)+"%; }\n";
+}
+  css.innerHTML += "}\n";
+  css.innerHTML += "#slidy { left: 0%; "+keyframeprefix+"transform: translate3d(0,0,0); "+keyframeprefix+"animation: "+totalTime+"s slidy infinite; }\n"; // call on the completed keyframe animation sequence
+document.body.appendChild(css); // add the new stylesheet to the end of the document
+}
+</script>
+</div>
+</div>
+</div><br /><br />
+
+<div class="col-md-12">
+<div style="border-top:1px solid #0088cc;  color: #ff48ff;">
+</div><br /><br />
+</div>
+
+
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12">
+<!-- Inspired by: https://codepen.io/donovanh/pen/dYqxNb -->
+<div class="rating">
+  <input type="checkbox" autocomplete="off" id="smile" name="smiley" />
+  <label class="smiley" for="smile" title="Smile" aria-hidden="true"></label>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+</div>
+</div>
+</div>
+
+<!--*********** !-->
+<div class="footer-social-icons">
+    <h2 class="_14" style="text-align: center;color: #c29e00;margin-top: 12%;">FOLLOW US</h2>
+    <ul class="social-icons" style="text-align: center;margin-top: 10%;">
+        <li><a href="https://www.facebook.com/roshnitents05/?modal=admin_todo_tour" class="social-icon" title="Facebook" style="text-decoration: none;
+    color: white;"> <i class="fa fa-facebook"></i></a></li>
+        <li><a href="https://twitter.com/roshni_tents" class="social-icon" title="Twitter"> <i class="fa fa-twitter"></i></a></li>
+         <li><a href="https://www.instagram.com/roshnitents_/" class="social-icon" title="Instagram"> <i class="fa fa-instagram"></i></a></li>
+        <li><a href="https://www.youtube.com/channel/UC_eoEIZ7hwbyRa1lpstiLrQ" class="social-icon" title="Youtube"> <i class="fa fa-youtube"></i></a></li>
+        <li><a href="https://www.linkedin.com/company/roshni-tents/" class="social-icon" title="Linkedin"> <i class="fa fa-linkedin"></i></a></li>
+    </ul>
+</div>
+
+<div class="col-md-12">
+<div style="border-top:3px solid #0088cc;  color: #ff48ff;margin-top: 2%;">
+</div>
+</div>
+
+
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+ 
+}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #2492ff;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+#myBtn:hover {
+  background-color: #555;
+}
+</style>
+</head>
+<body>
+<button onclick="topFunction()" id="myBtn" title="Go to top">&#9650;</button>
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+
+</body>
+</html>

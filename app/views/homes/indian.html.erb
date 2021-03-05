@@ -1,0 +1,291 @@
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href='https://fonts.googleapis.com/css?family=Great Vibes' rel='stylesheet'>
+<style>
+.mySlides {display:none;}
+</style>
+<body>
+<div class="container-fluid">
+<div class="navbar-header">
+<h3 style="color: #2492ff
+">Indian Wedding Themes</h3></div>
+<ul class="nav navbar-nav navbar-right">
+<li><%= link_to "Home" , homes_index_path,style: "color: #ea4e74",data: { turbolinks: false } %></li> 
+<li style="margin-top: 7%;">&gt</li>
+<li class="active"><%= link_to "Indian Wedding Themes" , homes_indian_path,style: "color: #2492ff" %></li></ul>
+</div>
+<div class="w3-content w3-section" style="max-width:800px; display: block;    
+">
+  <%= image_tag "IMG-20171206-WA0012.jpg", height: 500, class: "mySlides",:style=>"width: 100%; vertical-align: middle; height: 500px; float: left; position: relative; display: list-item;" %>
+
+  <%= image_tag "IMG-20180303-WA0009.jpg", height: 500, class: "mySlides",:style=>"width: 100%; vertical-align: middle; height: 500px; float: left; position: relative; display: list-item;" %>
+ 
+  <%= image_tag "IMG-20180808-WA0003.jpg", height: 500, class: "mySlides",:style=>"width: 100%; vertical-align: middle; height: 500px; float: left; position: relative; display: list-item;" %>
+</div>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+<br />
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12">
+<h2 style="text-align: left;margin-top: 5%;">
+<span style="color: #ff48ff;">
+<i>Indian Themed Events</i></span></h2>
+<p class="lead" style="font-size:20px;"><p>Roshni Tents is best known for melding traditional Indian fabrics, colors, motifs and craftsmanship with modern design and innovation. Our collection of tenting and décor is hand made in India with fabrics that we have milled and dyed to order. We take great pride in the detail and authenticity of our flexible range of luxury Indian themed tenting and décor for events on all scales. Whether you are planning a large traditional Punjabi Indian wedding, a Bollywood themed corporate party or a small private dinner at home with friends, we love providing the right backdrop for your celebration.
+</p><br/ ><br />
+</div>
+</div>
+</div>
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-4">
+<!-- 1. classic wedding image part start -->
+<h3 style="color: #c29e00; margin-left: 3%;text-align: center;";>Indian Weddings</h3>
+</div>
+<div class="col-md-4">
+<!-- 1. classic wedding image part start -->
+<h3 style="color: #c29e00; margin-left: 3%;text-align: center";>Bollywood Theme Parties</h3>
+</div>
+<div class="col-md-4">
+<!-- 1. classic wedding image part start -->
+<h3 style="color: #c29e00; margin-left: 3%;text-align: center";>Punjabi Indian wedding</h3><br /><br />
+</div>
+</div>
+</div>
+<!-- model image add in wedding page -->
+<div class="col-md-12">
+ <div class="w3-row-padding">
+
+  <div class="w3-container w3-third">
+   <%= image_tag "41640ecb5db7618bacc8fb2bcff85f56.jpg", width:400 , height:262 , class: "w3-hover-opacity",onclick: "onClick(this)",:style=>"cursor:pointer;" ,data: { turbolinks: false } %>
+  </div>
+  <div class="w3-container w3-third">
+    <%= image_tag "22813-Indian_wedding_photo_braja_mandala_1232-orig.jpeg", width:400 , height:262 , class: "w3-hover-opacity",onclick: "onClick(this)",:style=>"cursor:pointer;" ,data: { turbolinks: false } %>
+  </div>
+  <div class="w3-container w3-third">
+   <%= image_tag "66071115213dfff70c9105d931b56d0d.jpg", width:400 , height:262 , class: "w3-hover-opacity",onclick: "onClick(this)",:style=>"cursor:pointer;" ,data: { turbolinks: false } %><br /><br />
+  </div>
+  <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+  <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+  <div class="w3-modal-content w3-animate-zoom">
+    <img id="img01" style="width:100%">
+  </div>
+</div>
+<script>
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+}
+</script>
+
+<!-- 1. Indian weddings content start -->
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-4">
+<p class="lead" style="font-size:20px;"><p><b>Preparing for an Indian wedding?</b> Check our Indian Wedding Zone for great ideas and stunning images. At Roshni Tents, we know what makes an Indian themed wedding really stand out.</p>
+</div>
+<!-- Indian weddings content end -->
+<div class="col-md-4">
+<p class="lead" style="font-size:20px;"><p><b>Planning a Bollywood theme party?</b> Tap into the rich, vibrant colors and designs of India to celebrate ‘Bollywood’ style whether your party is a large corporate affair or a smaller private gathering.</p>
+</div>
+<div class="col-md-4">
+<p class="lead" style="font-size:20px;"><p><b>Punjabi Indian wedding?</b> Tap into the rich, vibrant colors and designs of India to celebrate ‘Punjabi’ style whether your party is a large corporate affair or a smaller private gathering.</p><br /><br />
+</div>
+</div>
+</div>
+<div class="col-md-12">
+<div style="border-top:1px solid #0088cc;  color: #ff48ff;">
+</div><br /><br />
+</div>
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12">
+<h2 style="text-align: center;font-family: 'Great Vibes';font-size: 42px;">
+<span style="color: #ff48ff;">
+<i>Explore Our Indian Theme</i></span></h2><br /><br />
+</div>
+</div>
+</div>
+<!-- bottom images slider in html page start !-->
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12">
+<div id="slidy-container">
+  <figure id="slidy">
+    <%= image_tag "https://i.pinimg.com/originals/41/64/0e/41640ecb5db7618bacc8fb2bcff85f56.jpg" %>
+    <%= image_tag "IMG-20200301-WA0005.jpg" %>
+    <%= image_tag "IMG-20191223-WA0006.jpg" %>
+    <%= image_tag "https://qph.fs.quoracdn.net/main-qimg-0c6bc9705f717b1f07a449520d2abf9c" %>
+    <%= image_tag "IMG-20191223-WA0005.jpg" %>
+    <%= image_tag "https://i.weddingomania.com/25-unique-and-special-wedding-tents-ideas-22.jpg" %>
+    <%= image_tag "https://www.maharaniweddings.com/wp-content/gallery/harvard-photography-7-29-13/indian-wedding-mandap-floral-decor.jpg" %>
+    <%= image_tag "http://www.meltingflowers.com/blogs/wp-content/uploads/2016/05/DVK_4237.jpg" %>
+    <%= image_tag "https://www.maharaniweddings.com/media/gallery/15057-A-51.jpeg" %>
+    <%= image_tag "IMG-20190412-WA0003.jpg" %>
+    <%= image_tag "https://media-cdn.tripadvisor.com/media/photo-s/0e/83/b9/d6/photos-of-the-head-table.jpg" %>
+    <%= image_tag "IMG-20191221-WA0027.jpg" %>
+  </figure>
+</div>
+<style>
+body 
+#slidy-container { 
+  width: 70%; overflow: hidden; margin: 0 auto;
+}
+</style>
+<script>
+var timeOnSlide = 3,        
+    // the time each image will remain static on the screen, measured in seconds
+timeBetweenSlides = 1,  
+    // the time taken to transition between images, measured in seconds
+
+// test if the browser supports animation, and if it needs a vendor prefix to do so
+    animationstring = 'animation',
+    animation = false,
+    keyframeprefix = '',
+    domPrefixes = 'Webkit Moz O Khtml'.split(' '), 
+    // array of possible vendor prefixes
+    pfx  = '',
+    slidy = document.getElementById("slidy"); 
+if (slidy.style.animationName !== undefined) { animation = true; } 
+// browser supports keyframe animation w/o prefixes
+
+if( animation === false ) {
+  for( var i = 0; i < domPrefixes.length; i++ ) {
+    if( slidy.style[ domPrefixes[i] + 'AnimationName' ] !== undefined ) {
+      pfx = domPrefixes[ i ];
+      animationstring = pfx + 'Animation';
+      keyframeprefix = '-' + pfx.toLowerCase() + '-';
+      animation = true;
+      break;
+    }
+  }
+}
+
+if( animation === false ) {
+  // animate in JavaScript fallback
+} else {
+  var images = slidy.getElementsByTagName("img"),
+      firstImg = images[0], 
+      // get the first image inside the "slidy" element.
+      imgWrap = firstImg.cloneNode(false);  // copy it.
+  slidy.appendChild(imgWrap); // add the clone to the end of the images
+  var imgCount = images.length, // count the number of images in the slide, including the new cloned element
+      totalTime = (timeOnSlide + timeBetweenSlides) * (imgCount - 1), // calculate the total length of the animation by multiplying the number of _actual_ images by the amount of time for both static display of each image and motion between them
+      slideRatio = (timeOnSlide / totalTime)*100, // determine the percentage of time an induvidual image is held static during the animation
+      moveRatio = (timeBetweenSlides / totalTime)*100, // determine the percentage of time for an individual movement
+      basePercentage = 100/imgCount, // work out how wide each image should be in the slidy, as a percentage.
+      position = 0, // set the initial position of the slidy element
+      css = document.createElement("style"); // start marking a new style sheet
+  css.type = "text/css";
+  css.innerHTML += "#slidy { text-align: left; margin: 0; font-size: 0; position: relative; width: " + (imgCount * 100) + "%;  }\n"; // set the width for the slidy container
+  css.innerHTML += "#slidy img { float: left; width: " + basePercentage + "%; }\n";
+  css.innerHTML += "@"+keyframeprefix+"keyframes slidy {\n"; 
+  for (i=0;i<(imgCount-1); i++) { // 
+    position+= slideRatio; // make the keyframe the position of the image
+    css.innerHTML += position+"% { left: -"+(i * 100)+"%; }\n";
+    position += moveRatio; // make the postion for the _next_ slide
+    css.innerHTML += position+"% { left: -"+((i+1) * 100)+"%; }\n";
+}
+  css.innerHTML += "}\n";
+  css.innerHTML += "#slidy { left: 0%; "+keyframeprefix+"transform: translate3d(0,0,0); "+keyframeprefix+"animation: "+totalTime+"s slidy infinite; }\n"; // call on the completed keyframe animation sequence
+document.body.appendChild(css); // add the new stylesheet to the end of the document
+}
+</script>
+</div>
+</div>
+</div><br /><br />
+<div class="col-md-12">
+<div style="border-top:1px solid #0088cc;  color: #ff48ff;">
+</div><br /><br />
+</div>
+</div>
+</div>
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12">
+<!-- Inspired by: https://codepen.io/donovanh/pen/dYqxNb -->
+<div class="rating">
+  <input type="checkbox" autocomplete="off" id="smile" name="smiley" />
+  <label class="smiley" for="smile" title="Smile" aria-hidden="true"></label>
+</div>
+</div>
+</div>
+</div>
+<!--*********** !-->
+<div class="footer-social-icons">
+    <h2 class="_14" style="text-align: center;color: #c29e00;margin-top: 12%;">FOLLOW US</h2>
+    <ul class="social-icons" style="text-align: center;margin-top: 10%;">
+        <li><a href="https://www.facebook.com/roshnitents05/?modal=admin_todo_tour" class="social-icon" title="Facebook" style="text-decoration: none;
+    color: white;"> <i class="fa fa-facebook"></i></a></li>
+        <li><a href="https://twitter.com/roshni_tents" class="social-icon" title="Twitter"> <i class="fa fa-twitter"></i></a></li>
+         <li><a href="https://www.instagram.com/roshnitents_/" class="social-icon" title="Instagram"> <i class="fa fa-instagram"></i></a></li>
+        <li><a href="https://www.youtube.com/channel/UC_eoEIZ7hwbyRa1lpstiLrQ" class="social-icon" title="Youtube"> <i class="fa fa-youtube"></i></a></li>
+        <li><a href="https://www.linkedin.com/company/roshni-tents/" class="social-icon" title="Linkedin"> <i class="fa fa-linkedin"></i></a></li>
+      </ul>
+</div>
+<div class="col-md-12">
+<div style="border-top:3px solid #0088cc;  color: #ff48ff;margin-top: 2%;">
+</div>
+</div>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+ 
+}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #2492ff;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+#myBtn:hover {
+  background-color: #555;
+}
+</style>
+</head>
+<body>
+<button onclick="topFunction()" id="myBtn" title="Go to top">&#9650;</button>
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @coffee_roast.username %>
+</p>
+
+<p>
+  <strong>Query:</strong>
+  <%= @coffee_roast.query %>
+</p>
+
+<p>
+  <strong>Mobile number:</strong>
+  <%= @coffee_roast.mobile_number %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @coffee_roast.email_id %>
+</p>
+
+<p>
+  <strong>Occasion:</strong>
+  <%= @coffee_roast.occasion %>
+</p>
+
+<%= link_to 'Edit', edit_coffee_roast_path(@coffee_roast) %> |
+<%= link_to 'Back', coffee_roasts_path %>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RthApp</title>
+    <!-- Second navbar for search -->
+    <link href="application.css" rel="stylesheet" type="text/css">
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+   <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcvvgUncbNc_mOVwpa1gY6mxnvuWvEHlk &callback=initMap">
+    </script>
+
+</head>
+
+  <body>
+ <div id="nav" style="background-color: black;">
+      <div id="nav_wrapper" style="background-color: black;color: white;">
+      <ul>
+      <li><%= link_to "Home" , homes_index_path, data: { turbolinks: false } %></li>
+      <li><%= link_to "About Us", homes_abouts_path, data: { turbolinks: false } %></li>
+      <!-- Event_Type  start page add -->
+      <li><%= link_to "Event Types" %>
+        <ul>
+        <li><%= link_to "Weddings", homes_wedding_path, data: { turbolinks: false } %></li>
+         <li><%= link_to "classic Wedding", homes_classic_wedding_path, data: { turbolinks: false } %></li>
+        <li><%= link_to "Corporate Events", homes_corporate_events_path, data: { turbolinks: false } %></li>
+        <li><%= link_to "View more",  homes_view_more_path, data: { turbolinks: false } %></li>
+        </ul> 
+      </li>
+      <!-- Event_Type end page -->
+      
+      <!-- Services start page -->
+      <li><%= link_to "Services" %>
+        <ul>
+        <li><%= link_to "Light Decoration", homes_light_decoration_path, data: { turbolinks: false } %></li>
+        <li><%= link_to "Flower Decoration", homes_flower_decoration_path, data: { turbolinks: false } %></li>
+        <li><%= link_to "Catering", homes_catering_path, data: { turbolinks: false } %></li>
+        <li><%= link_to "View all", homes_view_all_path, data: { turbolinks: false } %></li>
+        </ul>
+      </li>
+      <!-- Services end -->
+      <!--- Gallery dropdown add -->
+      <li><%= link_to "Themes" %>
+        <ul>
+      <li><%= link_to "Indian" , homes_indian_path, data: { turbolinks: false } %></li>
+      <li><%= link_to "Simply Stunning", homes_simply_stunning_path, data: { turbolinks: false } %></li>
+      <li><%= link_to "Moroccan", homes_moroccan_path, data: { turbolinks: false } %></li>
+       <li><%= link_to "Other Great Themes", homes_other_great_themes_path, data: { turbolinks: false } %></li>
+      </ul>
+      </li>
+      <!-- Gallery dropdown end -->
+      <li><%= link_to "Destination Wedding", homes_destination_wedding_path, data: { turbolinks: false } %></li>
+      <li><%= link_to "Blog", homes_blog_path, data: { turbolinks: false } %></li>
+
+      <li><%= link_to "Contact Us", new_coffee_roast_path, data: { turbolinks: false } %></li>
+      </ul>
+    </div>
+      </div>
+     <div class="container-fluid">
+     <%= image_tag "Product(7) edit.jpg" %>
+     <i class="fa fa-phone" style="width: 20px;text-align: center;color: black;margin-left: 55%"></i>+91 8827047626 &nbsp;&nbsp;<i class="fa fa-phone" style="width: 20px;text-align: center;color: black;"></i>+91 9329282425
+    </div><br />
+   
+    <%= yield %>
+   
+<!-- footer add page -->
+<footer id="footer" class="narrow" style="background-color: black; padding-top: 30px;font-size: 0.9em;margin-top: 0px;position: relative;clear: both;border-top: 4px solid #060606;">
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+<link rel="stylesheet" href="style.css">
+<div class="container">
+<div class="row" style="margin-right: -15px;margin-left: -15px; margin-bottom: 25px;">
+
+<div class="col-md-9" style="width: 75%;float: left;    position: relative;min-height: 1px;padding-right: 15px;
+padding-left: 15px;
+">
+
+<ul class="nav nav-pills" style="padding-left: 0;margin-bottom: 0;list-style: none; float: left;">
+
+<li>
+<p style="line-height: 24px;padding: 5px 12px;color: white;border-radius: 4px;position: relative;display: block;outline: none !important;text-decoration: none;background-color: transparent;box-sizing: border-box;"><%= link_to "About Us", homes_abouts_path,style: "color: white",data: { turbolinks: false } %></p>
+</li>
+<li>
+<p style="line-height: 24px;padding: 5px 12px;color: #FFF;border-radius: 4px;position: relative;display: block;outline: none !important;text-decoration: none;background-color: transparent;box-sizing: border-box;"><%= link_to "Privacy Policy","#",style: "color: white",data: { turbolinks: false } %></p>
+</li>
+<li>
+<p style="line-height: 24px;padding: 5px 12px;color: #FFF;border-radius: 4px;position: relative;display: block;outline: none !important;text-decoration: none;background-color: transparent;box-sizing: border-box;"><%= link_to "Term of Use","#",style: "color: white",data: { turbolinks: false } %></p>
+</li>
+<li>
+<p style="line-height: 24px;padding: 5px 12px;color: #FFF;border-radius: 4px;position: relative;display: block;outline: none !important;text-decoration: none;background-color: transparent;box-sizing: border-box;"><%= link_to "Home",  homes_index_path,style: "color: white",data: { turbolinks: false } %></p>
+</li>
+<li>
+<p style="line-height: 24px;padding: 5px 12px;color: #FFF;border-radius: 4px;position: relative;display: block;outline: none !important;text-decoration: none;background-color: transparent;box-sizing: border-box;"><%= link_to "Quick Enquiry","#",style: "color: white",data: { turbolinks: false } %></p>
+</li>
+<li>
+<p style="line-height: 24px;padding: 5px 12px;color: #FFF;border-radius: 4px;position: relative;display: block;outline: none !important;text-decoration: none;background-color: transparent;box-sizing: border-box;"><%= link_to "Contact-Us",new_coffee_roast_path,style: "color: white",data: { turbolinks: false }  %></p>
+</li>
+</ul>
+</div>
+<div class="col-md-3">
+<div class="narrow-phone" style="font-size: 16px;padding-bottom: 0;margin-top: -13px;text-align: right;">
+<h5 class="mb-sm" style="color: #CCC; margin-bottom: 10px !important;font-size: 1em;font-weight: 600;letter-spacing: normal;line-height: 18px;margin: 0 0 14px 0;text-transform: uppercase;font-family: inherit;box-sizing: border-box;">Contact Us</h5>
+<h5 class="mb-sm" style="color: #CCC; margin-bottom: 10px !important;font-size: 1em;font-weight: 600;letter-spacing: normal;line-height: 18px;margin: 0 0 14px 0;text-transform: uppercase;font-family: inherit;box-sizing: border-box;">Girish Nagar</h5>
+<span class="phone" style="color: #FFF;font-weight: bold;display: block;">
+<i class="fa fa-whatsapp" style="display: inline-block;font: normal normal normal 14px/1 FontAwesome;font-size: inherit;text-rendering: auto;box-sizing: border-box;"></i>
+8827-047-626
+</span>
+</div>	
+</div>
+</div>	
+</div>
+<div class="footer-copyright">
+<div class="container">
+<div class="row" style="margin-bottom: 25px;">
+<div class="col-md-12" align="center" style="width: 100%;float: left;position: relative;min-height: 1px;padding-right: 15px;padding-left: 15px;">
+<p class="h5" style="font-size: 14px;font-family: inherit;font-weight: 500;line-height: 1.1;">
+<a href="#" style="color: #FFF;">roshnitents.com</a> © Copyright 2018. All Rights Reserved.Powered By: 
+<a href="http://localhost:3000/homes/abouts" style="color: #FFF;"> Roshni Nagar</a>
+</p>
+
+</div>
+</div>	
+</div>
+</div>
+
+</footer>
+</body>
+</html>

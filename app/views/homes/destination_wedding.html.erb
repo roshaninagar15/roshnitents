@@ -1,0 +1,264 @@
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href='https://fonts.googleapis.com/css?family=Great Vibes' rel='stylesheet'>
+<style>
+.mySlides {display:none;}
+</style>
+<body>
+<div class="container-fluid">
+<div class="navbar-header">
+<h3 style="color: #2492ff
+">Destination Wedding</h3></div>
+<ul class="nav navbar-nav navbar-right">
+<li><%= link_to "Home" , homes_index_path,style: "color: #ea4e74",data: { turbolinks: false } %></li> 
+<li style="margin-top: 7%;">&gt</li>
+<li class="active"><%= link_to "Destination Wedding" , homes_destination_wedding_path,style: "color: #2492ff" %></li></ul>
+</div>
+<div class="w3-content w3-section" style="max-width:800px; display: block;    
+">
+  <img class="mySlides" src="https://www.maharaniweddings.com//media/gallery/58913-01-2-orig.jpeg" style="width:100%;height: 3%;vertical-align: middle; transition: opacity 1s linear;height: 500px;float: left;position: relative;display: list-item;">
+  <img class="mySlides" src="https://i.pinimg.com/736x/48/68/97/4868975035ba48f059d83646603025e3--tent-decorations-wedding-reception-decorations.jpg" style="width:100%; height: 5%; transition: opacity 1s linear;height: 500px;float: left;position: relative;display: list-item;">
+  <img class="mySlides" src="http://khazanacreations.com/wp-content/uploads/2015/02/HS-KC-winter-wonderland-8623-1200x675.jpg" style="width:100%;height: 5%; transition: opacity 1s linear;height: 500px;float: left;position: relative;display: list-item;">
+</div>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+<br />
+
+
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12">
+<h2 style="text-align: left;margin-top: 5%;">
+<span style="color: #ff48ff;">
+<i>Destination Weddings & Events with Roshni Tents</i></span></h2>
+<p class="lead" style="font-size:20px;"><p>As all of our events outside ujjain are Destination Events for us, we are involved with a lot of destination event planning. This proficiency and experience comes to the fore when working with clients on their Destination Events. Over the years we have built up our capability for Destination Events, from designs, inventory, logistics, a seasoned crew to resources and connections around the country and are proud to have so much positive feedback from our clients.
+</p><br/ ><br />
+<div class="col-md-12">
+ <div class="w3-row-padding">
+
+  <div class="w3-container w3-third">
+    <img src="http://www.withloveevents.in/images/wedding_decoration.jpg" style="width:100%;cursor:pointer" 
+    onclick="onClick(this)" class="w3-hover-opacity">
+  </div>
+  <div class="w3-container w3-third">
+    <%= image_tag "beach-side-wedding-mandap-decorations.jpg", width:385 , height:255 , class: "w3-hover-opacity",onclick: "onClick(this)",:style=>"cursor:pointer;" ,data: { turbolinks: false } %>
+  </div>
+  <div class="w3-container w3-third">
+    <img src="https://ambergriscaye.com/photogallery/art/lighting1000wewewww.jpg" style="width:100%;cursor:pointer" 
+    onclick="onClick(this)" class="w3-hover-opacity"><br /><br /><br /><br />
+  </div>
+  <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+  <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+  <div class="w3-modal-content w3-animate-zoom">
+    <img id="img01" style="width:100%">
+  </div>
+</div>
+<script>
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+}
+</script>
+</div>
+</div><br /><br /><br /><br />
+
+<h2 style="text-align: center;font-family: 'Great Vibes';font-size: 42px;margin-top: 8%;">
+<span style="color: #ff48ff;">
+<i>Destination Weddings</i></span></h2>
+<p class="lead" style="font-size:25px;"><p>Whether you want a destination wedding to get away from it all or to get closer to those you love most, destination weddings come with their own set of planning issues and considerations. Fortunately, Roshni Tents is here to help you to find the best destination wedding in ujjain and many other cities to manage and turn all your dreams into reality. We make sure that you make memories that you will cherish for your entire life. Our ideas for destination wedding invitations, dresses, and favors have undeniably made planning a breeze. With our support, you can just sit back and enjoy the precious time of togetherness with your loved ones while we plan your wonderful wedding. We offer destination wedding in indore, dewas, bhopal, udaipur, jaipur and all over M.P. and many other places in India and abroad.
+</p><br/ >
+</div>
+</div>
+</div>
+
+
+
+<!-- bottom images slider in html page start !-->
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12">
+<div id="slidy-container">
+  <figure id="slidy">
+   <%= image_tag "lights-and-flower-decor-fabric-and-flowers.jpg" %>
+   <%= image_tag "image-3.jpg" %>
+   <%= image_tag "image-4.jpg" %>
+   <%= image_tag "http://khazanacreations.com/wp-content/uploads/2015/02/HS-KC-winter-wonderland-8623-1200x675.jpg" %>
+   <%= image_tag "https://ambergriscaye.com/photogallery/art/lighting1000wewewww.jpg" %>
+   <%= image_tag "DSC_3430.JPG" %>
+   <%= image_tag "http://www.withloveevents.in/images/wedding_decoration.jpg" %>
+   <%= image_tag "DSC_3430.JPG" %>
+   <%= image_tag "IMG-20161225-WA0063.jpg" %>
+   <%= image_tag "slider1.jpg" %>
+   <%= image_tag "http://1.bp.blogspot.com/_voN0CT2qmzc/S--qnELX29I/AAAAAAAAAFs/dIJ2Zwi1-as/s1600/4g_Poolside_wedding_setup.jpg" %>
+   <%= image_tag "http://www.partycruisersindia.com/blog/wp-content/uploads/2013/11/wedding-resorts-in-mauritious.jpg" %>
+  </figure>
+</div>
+
+<style>
+body 
+#slidy-container { 
+  width: 70%; overflow: hidden; margin: 0 auto;
+}
+</style>
+<script>
+var timeOnSlide = 3,        
+    // the time each image will remain static on the screen, measured in seconds
+timeBetweenSlides = 1,  
+    // the time taken to transition between images, measured in seconds
+
+// test if the browser supports animation, and if it needs a vendor prefix to do so
+    animationstring = 'animation',
+    animation = false,
+    keyframeprefix = '',
+    domPrefixes = 'Webkit Moz O Khtml'.split(' '), 
+    // array of possible vendor prefixes
+    pfx  = '',
+    slidy = document.getElementById("slidy"); 
+if (slidy.style.animationName !== undefined) { animation = true; } 
+// browser supports keyframe animation w/o prefixes
+
+if( animation === false ) {
+  for( var i = 0; i < domPrefixes.length; i++ ) {
+    if( slidy.style[ domPrefixes[i] + 'AnimationName' ] !== undefined ) {
+      pfx = domPrefixes[ i ];
+      animationstring = pfx + 'Animation';
+      keyframeprefix = '-' + pfx.toLowerCase() + '-';
+      animation = true;
+      break;
+    }
+  }
+}
+
+if( animation === false ) {
+  // animate in JavaScript fallback
+} else {
+  var images = slidy.getElementsByTagName("img"),
+      firstImg = images[0], 
+      // get the first image inside the "slidy" element.
+      imgWrap = firstImg.cloneNode(false);  // copy it.
+  slidy.appendChild(imgWrap); // add the clone to the end of the images
+  var imgCount = images.length, // count the number of images in the slide, including the new cloned element
+      totalTime = (timeOnSlide + timeBetweenSlides) * (imgCount - 1), // calculate the total length of the animation by multiplying the number of _actual_ images by the amount of time for both static display of each image and motion between them
+      slideRatio = (timeOnSlide / totalTime)*100, // determine the percentage of time an induvidual image is held static during the animation
+      moveRatio = (timeBetweenSlides / totalTime)*100, // determine the percentage of time for an individual movement
+      basePercentage = 100/imgCount, // work out how wide each image should be in the slidy, as a percentage.
+      position = 0, // set the initial position of the slidy element
+      css = document.createElement("style"); // start marking a new style sheet
+  css.type = "text/css";
+  css.innerHTML += "#slidy { text-align: left; margin: 0; font-size: 0; position: relative; width: " + (imgCount * 100) + "%;  }\n"; // set the width for the slidy container
+  css.innerHTML += "#slidy img { float: left; width: " + basePercentage + "%; }\n";
+  css.innerHTML += "@"+keyframeprefix+"keyframes slidy {\n"; 
+  for (i=0;i<(imgCount-1); i++) { // 
+    position+= slideRatio; // make the keyframe the position of the image
+    css.innerHTML += position+"% { left: -"+(i * 100)+"%; }\n";
+    position += moveRatio; // make the postion for the _next_ slide
+    css.innerHTML += position+"% { left: -"+((i+1) * 100)+"%; }\n";
+}
+  css.innerHTML += "}\n";
+  css.innerHTML += "#slidy { left: 0%; "+keyframeprefix+"transform: translate3d(0,0,0); "+keyframeprefix+"animation: "+totalTime+"s slidy infinite; }\n"; // call on the completed keyframe animation sequence
+document.body.appendChild(css); // add the new stylesheet to the end of the document
+}
+</script>
+</div>
+</div>
+</div><br /><br />
+<div class="col-md-12">
+<div style="border-top:1px solid #0088cc;  color: #ff48ff;">
+</div><br /><br />
+</div>
+
+
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12">
+<!-- Inspired by: https://codepen.io/donovanh/pen/dYqxNb -->
+<div class="rating">
+  <input type="checkbox" autocomplete="off" id="smile" name="smiley" />
+  <label class="smiley" for="smile" title="Smile" aria-hidden="true"></label>
+</div>
+</div>
+</div>
+</div>
+
+<!--*********** !-->
+<div class="footer-social-icons">
+    <h2 class="_14" style="text-align: center;color: #c29e00;margin-top: 12%;">FOLLOW US</h2>
+    <ul class="social-icons" style="text-align: center;margin-top: 10%;">
+        <li><a href="https://www.facebook.com/roshnitents05/?modal=admin_todo_tour" class="social-icon" title="Facebook" style="text-decoration: none;
+    color: white;"> <i class="fa fa-facebook"></i></a></li>
+        <li><a href="https://twitter.com/roshni_tents" class="social-icon" title="Twitter"> <i class="fa fa-twitter"></i></a></li>
+        <li><a href="https://www.instagram.com/roshnitents_/" class="social-icon" title="Instagram"> <i class="fa fa-instagram"></i></a></li>
+        <li><a href="https://www.youtube.com/channel/UC_eoEIZ7hwbyRa1lpstiLrQ" class="social-icon" title="Youtube"> <i class="fa fa-youtube"></i></a></li>
+        <li><a href="https://www.linkedin.com/company/roshni-tents/" class="social-icon" title="Linkedin"> <i class="fa fa-linkedin"></i></a></li>
+    </ul>
+</div>
+
+<div class="col-md-12">
+<div style="border-top:3px solid #0088cc;  color: #ff48ff;margin-top: 2%;">
+</div>
+</div>
+
+
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+ 
+}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #2492ff;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+#myBtn:hover {
+  background-color: #555;
+}
+</style>
+</head>
+<body>
+<button onclick="topFunction()" id="myBtn" title="Go to top">&#9650;</button>
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+
+</body>
+</html>
+
