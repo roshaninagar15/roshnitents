@@ -15,7 +15,9 @@ gem 'rails', '~> 5.1.4'
 
 #gem 'sqlite3', '~> 1.4'
 
-gem 'sqlite3', '~> 1.3.11'
+#gem 'sqlite3', '~> 1.3.11'
+
+gem 'pg'
 
 
 #gem 'mysql2'
